@@ -4,6 +4,10 @@ class Print:
         line = f.readline()
         # Task 1
         # continue implementation here
+        if not line:
+            return
+        print(line, end='')
+        return self.recursive_print(f)
 
     def print_file(self, filename):
         f = open(filename)
@@ -14,6 +18,10 @@ class Print:
         line = f.readline()
         # Task 2
         # continue implementation here
+        if not line:
+            return
+        self.recursive_print_reverse(f)
+        print(line, end='')
 
     def print_file_reverse(self, filename):
         f = open(filename)
